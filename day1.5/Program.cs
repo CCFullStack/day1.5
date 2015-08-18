@@ -10,10 +10,10 @@ namespace day1._5
     {
         static void Main(string[] args)
         {
-            string one = "cat";
-            string two = "dog";
-            string three = "bird";
-            string four = "fish";
+            //string one = "cat";
+            //string two = "dog";
+            //string three = "bird";
+            //string four = "fish";
 
             string someStr = "The quick brown fox jumped over the lazy dog";
 
@@ -42,6 +42,35 @@ namespace day1._5
             //Console.WriteLine(string.Join(", ", colors));
 
             Console.ReadLine();
+
+            var str = "";
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                str = "Today is Tuesday";
+            }
+            else
+            {
+                str = "Today is not Tuesday";
+            }
+
+            str = "Today is " +
+                    (DateTime.Now.DayOfWeek != DayOfWeek.Tuesday ?
+                    "not " : "") + "Tuesday";
+
+            if (str == null)
+            {
+                str = "some value";
+            }
+
+            str = str != null ? str : "some value";
+            str = str ?? "some value";
+
+            switch(str)
+            {
+                case "some value": break;
+            }
         }
     }
+
+    
 }
